@@ -11,22 +11,22 @@ export default function Home() {
   const isDayTime = hours > 6 && hours < 20;
   const [walking, setWalking] = useState<Number | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [backgrondLoad, setBackgrondLoad] = useState(false)
-  const [videoLoad, setVideoLoad] = useState(false)
+  const [backgrondLoad, setBackgrondLoad] = useState(false);
+  const [videoLoad, setVideoLoad] = useState(false);
   useEffect(() => {
-    console.log("video load", videoLoad)
+    console.log("video load", videoLoad);
     if (backgrondLoad && videoLoad) {
       setTimeout(() => {
-        setWalking(100)
+        console.log("walking", walking);
+        setWalking(100);
       }, 5000);
     }
-  }, [backgrondLoad, videoLoad])
-
+  }, [backgrondLoad, videoLoad]);
 
   useEffect(() => {
     // Play the video when the component mounts
     if (videoRef.current) {
-      setVideoLoad(true)
+      setVideoLoad(true);
       videoRef.current.play().catch((error) => {
         // Autoplay might be blocked, handle the error here
         console.error("Autoplay blocked:", error);
@@ -61,7 +61,6 @@ export default function Home() {
       const x = e.pageX - slider.offsetLeft;
       const walk = (x - startX) * 3; // scroll-fast
       slider.scrollLeft = scrollLeft - walk;
-
     });
   }, []);
   const [open, setOpen] = useState(false);
@@ -70,7 +69,8 @@ export default function Home() {
   const [computerHoverDay, setComputerHoverDay] = useState(0);
   const [tabHoverDay, setTabHoverDay] = useState(0);
 
-
+  console.log("walking", walking);
+  console.log(walking === null);
   return (
     <div className="relative  w-full ">
       {walking === null && (
@@ -100,8 +100,8 @@ export default function Home() {
             width={2560}
             height={1200}
             onLoad={() => {
-              setBackgrondLoad(true)
-              console.log("background loaded")
+              setBackgrondLoad(true);
+              console.log("background loaded");
             }}
           />
 
@@ -152,7 +152,6 @@ export default function Home() {
             width="640"
             height="360"
             playsInline
-
           >
             <source src="/assets/space_background_2.mp4" type="video/mp4" />
           </video>
@@ -228,16 +227,25 @@ export default function Home() {
           </div>
         )} */}
       </div>
-      {(videoLoad  && backgrondLoad) ? <></> : <div className=" fixed bg-[#fff] flex items-center justify-center top-0 left-0 w-full h-full z-[100]">
-        <Image
-          alt=""
-
-          src={"/loading.gif"}
-          width={200}
-          height={200}
-
-        />
-      </div>}
+      {videoLoad && backgrondLoad ? (
+        <></>
+      ) : (
+        <div className=" fixed bg-[#fff] flex items-center justify-center top-0 left-0 w-full h-full z-[100]">
+          <Image
+            alt=""
+            className="z-10 object-cover"
+            fill
+            src={"/assets/space.webp"}
+          />
+          <Image
+            alt=""
+            className="z-50"
+            src={"/loading.gif"}
+            width={200}
+            height={200}
+          />
+        </div>
+      )}
     </div>
   );
 }
