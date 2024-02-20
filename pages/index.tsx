@@ -13,6 +13,14 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [backgrondLoad, setBackgrondLoad] = useState(false);
   const [videoLoad, setVideoLoad] = useState(false);
+
+  const [loadingGift, setLoadingGift] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingGift(false);
+    }, 3000);
+  }, []);
+
   useEffect(() => {
     console.log("video load", videoLoad);
     if (backgrondLoad && videoLoad) {
@@ -110,8 +118,8 @@ export default function Home() {
             onClick={() => setOpen(true)}
             className="absolute computer z-30"
             src={"/desktop/d_TV_cut_outline.webp"}
-            width={600}
-            height={600}
+            width={650}
+            height={604}
             style={{ opacity: computerHoverDay }}
             onMouseEnter={() => setComputerHoverDay(1)}
             onMouseLeave={() => setComputerHoverDay(0)}
@@ -227,25 +235,25 @@ export default function Home() {
           </div>
         )} */}
       </div>
-      {videoLoad && backgrondLoad ? (
-        <></>
-      ) : (
-        <div className=" fixed bg-[#fff] flex items-center justify-center top-0 left-0 w-full h-full z-[100]">
-          <Image
-            alt=""
-            className="z-10 object-cover"
-            fill
-            src={"/assets/space.webp"}
-          />
-          <Image
-            alt=""
-            className="z-50"
-            src={"/loading.gif"}
-            width={200}
-            height={200}
-          />
-        </div>
-      )}
+      {!videoLoad ||
+        !backgrondLoad ||
+        (loadingGift && (
+          <div className=" fixed bg-[#fff] flex items-center justify-center top-0 left-0 w-full h-full z-[100]">
+            <Image
+              alt=""
+              className="z-10 object-cover"
+              fill
+              src={"/assets/space.webp"}
+            />
+            <Image
+              alt=""
+              className="z-50"
+              src={"/loading.gif"}
+              width={200}
+              height={200}
+            />
+          </div>
+        ))}
     </div>
   );
 }
