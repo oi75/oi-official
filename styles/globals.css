@@ -68,7 +68,7 @@ img {
   object-fit: cover;
 }
 .computer {
-  width: 34%;
+  width: 33.96%;
   left: 14.6%;
   top: 24%;
 }
@@ -117,17 +117,13 @@ img {
   transform: rotate(-3.5deg);
 }
 .computer_top {
-   
   left: 35%;
   top: 50%;
 }
 .tab_top {
-   
   right: 24%;
   bottom: 23%;
 }
-
-
 
 /* @media screen and (min-width: 1024px) {
   .background_image {
@@ -379,11 +375,10 @@ video::-webkit-media-controls {
   animation-iteration-count: infinite;
 }
 
-.animate_scale{
+.animate_scale {
   animation-name: modalAnimation;
   animation-duration: 1.5s;
   transition: 1s linear all;
- 
 }
 @keyframes arrowRight {
   0% {
@@ -398,8 +393,8 @@ video::-webkit-media-controls {
 }
 @keyframes modalAnimation {
   0% {
-    opacity: .0;
-    transform: scale(.8);
+    opacity: 0;
+    transform: scale(0.8);
   }
 
   100% {

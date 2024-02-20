@@ -71,21 +71,19 @@ export default function Home() {
       slider.scrollLeft = scrollLeft - walk;
     });
   }, []);
-  const [open, setOpen] = useState(false);
+  const [openTV, setOpenTV] = useState(false);
   const [open2, setOpen2] = useState(false);
 
   const [computerHoverDay, setComputerHoverDay] = useState(0);
   const [tabHoverDay, setTabHoverDay] = useState(0);
 
-  console.log("walking", walking);
-  console.log(walking === null);
   return (
     <div className="relative  w-full ">
       {walking === null && (
         <div className=" fixed flex-col  lg:hidden top-[300px] left-[100px]  z-50  justify-center">
           <Image
             alt=""
-            onClick={() => setOpen(true)}
+            onClick={() => setOpenTV(true)}
             className="w-[140px]"
             src={"/assets/swipe.gif"}
             width={600}
@@ -99,7 +97,7 @@ export default function Home() {
       <div className="items">
         {/* {isDayTime ? ( */}
         <div className="item relative">
-          {open && <ComputerModal setOpen={setOpen} />}
+          {openTV && <ComputerModal setOpen={setOpenTV} />}
           {open2 && <TabletModal setOpen={setOpen2} />}
           <Image
             alt=""
@@ -115,7 +113,7 @@ export default function Home() {
 
           <Image
             alt=""
-            onClick={() => setOpen(true)}
+            onClick={() => setOpenTV(true)}
             className="absolute computer z-30"
             src={"/desktop/d_TV_cut_outline.webp"}
             width={650}
@@ -126,7 +124,7 @@ export default function Home() {
           />
           <div
             onMouseEnter={() => setComputerHoverDay(1)}
-            onClick={() => setOpen(true)}
+            onClick={() => setOpenTV(true)}
             className="absolute  computer_top  z-40"
           >
             <div className="w-10 h-10 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffff61]"></div>
@@ -245,13 +243,24 @@ export default function Home() {
               fill
               src={"/assets/space.webp"}
             />
-            <Image
+            <video
+              autoPlay
+              muted
+              loop
+              className=" z-50"
+              width="300"
+              height="360"
+              playsInline
+            >
+              <source src="/assets/loading.webm" type="video/webm" />
+            </video>
+            {/* <Image
               alt=""
               className="z-50"
               src={"/loading.gif"}
               width={200}
               height={200}
-            />
+            /> */}
           </div>
         ))}
     </div>
