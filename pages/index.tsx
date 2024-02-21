@@ -369,7 +369,7 @@ export default function Home() {
               </div>
               <div
                 className="relative"
-                style={{ height: "calc(100% - 220px)" }}
+                style={{ height: "calc(100% - 180px)" }}
               >
                 <div className="h-full py-4 flex flex-col gap-2 ml-4 items-start justify-between">
                   <div
@@ -457,32 +457,41 @@ export default function Home() {
                     {/* Tab 4 */}
                     {selectedTabID === 3 && <p className="text-xl">Vision</p>}
                   </div>
-                  <div className="p-4">
+                  <div className="h-full relativel overflow-auto p-4">
                     {/* Tab 1 */}
                     {selectedTabID === 0 && (
-                      <div>
-                        <div className="px-4 flex gap-4">
+                      <div className="pb-16">
+                        <div className="px-4 flex gap-8">
                           <p className="w-full">
-                            [On the Track, In Full Stride] Earth experiences an
-                            unprecedented phenomenon one day. As the
-                            gravitational pull suddenly weakens, stones that
-                            have been floating for a long time and were balanced
-                            by the Earth’s gravity, start to emerge. Cities
-                            across the globe are unexpectedly launched into
-                            space. Over time, the floating stones’ power
-                            dwindles slowly.
+                            [On the Track, In Full Stride]
+                            <br />
+                            Earth experiences an unprecedented phenomenon one
+                            day.
+                            <br />
+                            As the gravitational pull suddenly weakens, stones
+                            that have been floating for a long time and were
+                            balanced by the Earth’s gravity, start to emerge.
+                            <br />
+                            Cities across the globe are unexpectedly launched
+                            into space.
+                            <br />
+                            Over time, the floating stones’ power dwindles
+                            slowly.
                           </p>
                           <p className="w-full">
                             In a new world order where the concept of
                             nation-states has disappeared, these floating stones
                             have become essential resources for cities to
-                            survive. In a time where peace has existed for
-                            millennia, making traditional forms of warfare
-                            unnecessary, cities must find innovative ways to
-                            compete for the floating stones to ensure their
-                            safety. The competition is held in the form of a
-                            sports event known as Cosmo Athletic, where each
-                            city sends a representative athlete to take part.
+                            survive.
+                            <br />
+                            In a time where peace has existed for millennia,
+                            making traditional forms of warfare unnecessary,
+                            cities must find innovative ways to compete for the
+                            floating stones to ensure their safety.
+                            <br />
+                            The competition is held in the form of a sports
+                            event known as Cosmo Athletic, where each city sends
+                            a representative athlete to take part.
                           </p>
                         </div>
                       </div>
@@ -490,9 +499,9 @@ export default function Home() {
 
                     {/* Tab 2 */}
                     {selectedTabID === 1 && (
-                      <div>
-                        <div className="px-4">
-                          <p>
+                      <div className="pb-16">
+                        <div className="px-4 h-full">
+                          <p className="">
                             The city, situated at the center of the floating
                             district, is an amazing blend of Kyoto’s cultural
                             heritage and cutting-edge cosmic technology. Kyoto’s
@@ -529,8 +538,8 @@ export default function Home() {
 
                     {/* Tab 3 */}
                     {selectedTabID === 2 && (
-                      <div>
-                        <div className="px-4">
+                      <div className="pb-16">
+                        <div className="px-4 ">
                           <p>
                             The city, situated at the center of the floating
                             district, is an amazing blend of Kyoto’s cultural
@@ -568,7 +577,7 @@ export default function Home() {
 
                     {/* Tab 4 */}
                     {selectedTabID === 3 && (
-                      <div>
+                      <div className="pb-16">
                         <div className="px-4">
                           <p>
                             Oi intends to introduce a new token at the same time
