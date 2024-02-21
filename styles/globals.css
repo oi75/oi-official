@@ -335,7 +335,7 @@ video::-webkit-media-controls {
 }
 @media screen and (min-height: 768px) {
   .item {
-    min-width: 1620px;
+    min-width: 1600px;
     min-height: 900px;
   }
 }
@@ -354,19 +354,19 @@ video::-webkit-media-controls {
   }
 }
 
-/* @media screen and (min-width: 1920px) {
+@media screen and (min-height: 1440px) {
   .item {
-      min-width:2560px;
-      min-height: 1440px
+    min-width: 3200px;
+    min-height: 1800px;
   }
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-height: 1800px) {
   .item {
-      min-width:3440px;
-      min-height: 1440px
+    min-width: 3840px;
+    min-height: 2160px;
   }
-} */
+}
 
 .animate_right {
   animation-name: arrowRight;
