@@ -39,6 +39,20 @@ const ComputerModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
         width={2000}
         height={2000}
       />
+
+      <div className="absolute animate_scale">
+        <video
+          autoPlay
+          muted
+          loop
+          className=" z-50"
+          width="1000"
+          height="500"
+          playsInline
+        >
+          <source src="/desktop/tv_noise.webm" type="video/webm" />
+        </video>
+      </div>
     </div>
   );
 };

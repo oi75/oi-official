@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 import ComputerModal from "@/components/ComputerModal";
 import TabletModal from "@/components/TabletModal";
+import Modal from "@mui/joy/Modal";
+import { ModalDialog } from "@mui/joy";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -97,8 +99,6 @@ export default function Home() {
       <div className="items">
         {/* {isDayTime ? ( */}
         <div className="item relative">
-          {openTV && <ComputerModal setOpen={setOpenTV} />}
-          {open2 && <TabletModal setOpen={setOpen2} />}
           <Image
             alt=""
             className="background_image  relative z-10"
@@ -261,6 +261,27 @@ export default function Home() {
             /> */}
         </div>
       )}
+
+      {openTV && <ComputerModal setOpen={setOpenTV} />}
+      {open2 && <TabletModal setOpen={setOpen2} />}
+      {/* <Modal
+        open={openTV}
+        onClose={() => {
+          setOpenTV(false);
+        }}
+      >
+        <ModalDialog>
+          <div className="bg-white">
+            <Image
+              alt=""
+              className=" h-full w-full relative z-30  object-contain "
+              src={"/assets/tv_retro.webp"}
+              width={2000}
+              height={2000}
+            />
+          </div>
+        </ModalDialog>
+      </Modal> */}
     </div>
   );
 }
