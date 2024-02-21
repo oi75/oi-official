@@ -32,26 +32,28 @@ const ComputerModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
           />
         </svg>
       </div>
-      <Image
-        alt=""
-        className="  w-3/4 relative z-30 pt-[26px] object-contain animate_scale"
-        src={"/assets/tv_retro.webp"}
-        width={2000}
-        height={2000}
-      />
+      <div className="relative flex justify-center items-center">
+        <Image
+          alt=""
+          className="w-3/4 relative z-30 pt-[26px] object-contain animate_scale"
+          src={"/assets/tv_retro.webp"}
+          width={2000}
+          height={2000}
+        />
 
-      <div className="absolute animate_scale">
-        <video
-          autoPlay
-          muted
-          loop
-          className=" z-50"
-          width="1000"
-          height="500"
-          playsInline
-        >
-          <source src="/desktop/tv_noise.webm" type="video/webm" />
-        </video>
+        <div className="absolute top-[10%] bottom-[10%] left-[20%] right-[20%] animate_scale">
+          <video
+            autoPlay
+            muted
+            loop
+            className="w-full h-full z-20"
+            // width="1000"
+            // height="500"
+            playsInline
+          >
+            <source src="/desktop/tv_noise.webm" type="video/webm" />
+          </video>
+        </div>
       </div>
     </div>
   );
