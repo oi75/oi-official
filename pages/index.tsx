@@ -282,6 +282,13 @@ export default function Home() {
           </div>
         </ModalDialog>
       </Modal> */}
+
+      <div className="hidden">
+        <Image alt="TV" className="" src={"/assets/tv_retro.webp"} />
+        <video muted loop playsInline>
+          <source src="/desktop/tv_noise.webm" type="video/webm" />
+        </video>
+      </div>
     </div>
   );
 }
