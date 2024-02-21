@@ -629,6 +629,13 @@ export default function Home() {
           height={2000}
           src={"/assets/tv_retro.webp"}
         />
+        <Image
+          alt=""
+          className="w-full h-full select-none object-contain relative z-30 animate_scale"
+          src={"/assets/tablet_11.webp"}
+          width={2000}
+          height={2000}
+        />
         <video muted loop playsInline>
           <source src="/desktop/tv_noise.webm" type="video/webm" />
         </video>
