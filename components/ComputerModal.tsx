@@ -35,7 +35,7 @@ const ComputerModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
       <div className="relative flex justify-center items-center">
         <Image
           alt=""
-          className="w-3/4 relative z-30 pt-[26px] object-contain animate_scale"
+          className="w-[80%] relative z-30 pt-[26px] object-contain animate_scale"
           src={"/assets/tv_retro.webp"}
           width={2000}
           height={2000}

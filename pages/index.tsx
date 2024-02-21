@@ -262,26 +262,141 @@ export default function Home() {
         </div>
       )}
 
-      {openTV && <ComputerModal setOpen={setOpenTV} />}
-      {open2 && <TabletModal setOpen={setOpen2} />}
-      {/* <Modal
+      {/* {openTV && <ComputerModal setOpen={setOpenTV} />} */}
+      {/* {open2 && <TabletModal setOpen={setOpen2} />} */}
+      <Modal
         open={openTV}
         onClose={() => {
           setOpenTV(false);
         }}
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
-        <ModalDialog>
-          <div className="bg-white">
+        <div
+          className="w-full h-full p-16 flex justify-center items-center"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setOpenTV(false);
+          }}
+        >
+          <div className="relative select-none object-contain">
             <Image
               alt=""
-              className=" h-full w-full relative z-30  object-contain "
+              className="select-none h-full w-full relative z-30 object-contain animate_scale"
               src={"/assets/tv_retro.webp"}
               width={2000}
               height={2000}
             />
+            <div className="absolute top-[0%] bottom-[0%] left-[10%] right-[10%] animate_scale">
+              <video
+                autoPlay
+                muted
+                loop
+                className="w-full h-full z-20"
+                // width="1000"
+                // height="500"
+                playsInline
+              >
+                <source src="/desktop/tv_noise.webm" type="video/webm" />
+              </video>
+            </div>
           </div>
-        </ModalDialog>
-      </Modal> */}
+        </div>
+      </Modal>
+
+      <Modal
+        open={open2}
+        onClose={() => {
+          setOpen2(false);
+        }}
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <div
+          className="w-full h-full p-16 flex justify-center items-center select-none"
+          onClick={(e) => {}}
+        >
+          <div className="w-full max-w-[90%] h-auto max-h-[90%] relative select-none object-contain">
+            <Image
+              alt=""
+              className="w-full h-full object-contain relative z-30 animate_scale"
+              src={"/assets/tablet_11.webp"}
+              width={2000}
+              height={2000}
+            />
+
+            <div className="z-40 absolute top-[15%] bottom-[10%] left-[20%] right-[20%] h-full animate_scale">
+              <div className="pl-[10%] pr-[15%] py-[3%] w-full flex items-center justify-between">
+                <div className="flex items-center gap-5">
+                  <a
+                    href="https://www.discord.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      alt=""
+                      className=" cursor-pointer "
+                      src={"/assets/discord.png"}
+                      width={40}
+                      height={40}
+                    />
+                  </a>
+                  <a
+                    href="https://www.twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      alt=""
+                      className=" cursor-pointer "
+                      src={"/assets/twitter.png"}
+                      width={40}
+                      height={40}
+                    />
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div>
+                  <Image
+                    alt=""
+                    className="  "
+                    src={"/assets/fixed_1.png"}
+                    width={70}
+                    height={70}
+                  />
+                </div>
+                <div className="">
+                  <Image
+                    alt=""
+                    className="  "
+                    src={"/assets/fixed_2.png"}
+                    width={70}
+                    height={70}
+                  />
+                </div>
+                <div className="">
+                  <Image
+                    alt=""
+                    className="  "
+                    src={"/assets/fixed_3.png"}
+                    width={70}
+                    height={70}
+                  />
+                </div>
+                <div className="">
+                  <Image
+                    alt=""
+                    className="  "
+                    src={"/assets/fixed_4.png"}
+                    width={70}
+                    height={70}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Modal>
 
       <div className="hidden">
         <Image
