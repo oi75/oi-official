@@ -16,6 +16,8 @@ export default function Home() {
   const [backgrondLoad, setBackgrondLoad] = useState(false);
   const [videoLoad, setVideoLoad] = useState(false);
 
+  const [selectedTabID, setSelectedTabID] = useState(0);
+
   const [loadingGift, setLoadingGift] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -313,18 +315,28 @@ export default function Home() {
       >
         <div
           className="w-full h-full p-16 flex justify-center items-center select-none"
-          onClick={(e) => {}}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setOpen2(false);
+          }}
         >
-          <div className="w-full max-w-[90%] h-auto max-h-[90%] relative select-none object-contain">
+          <div
+            className="w-full max-w-[90%] h-auto relative select-none object-contain"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+          >
             <Image
               alt=""
-              className="w-full h-full object-contain relative z-30 animate_scale"
+              className="w-full h-full select-none object-contain relative z-30 animate_scale"
               src={"/assets/tablet_11.webp"}
               width={2000}
               height={2000}
             />
 
-            <div className="z-40 absolute top-[15%] bottom-[10%] left-[20%] right-[20%] h-full animate_scale">
+            <div className="z-40 absolute top-[17%] bottom-[10%] left-[20%] right-[24%] animate_scale">
               <div className="pl-[10%] pr-[15%] py-[3%] w-full flex items-center justify-between">
                 <div className="flex items-center gap-5">
                   <a
@@ -355,42 +367,244 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <div>
-                  <Image
-                    alt=""
-                    className="  "
-                    src={"/assets/fixed_1.png"}
-                    width={70}
-                    height={70}
-                  />
+              <div
+                className="relative"
+                style={{ height: "calc(100% - 220px)" }}
+              >
+                <div className="h-full py-4 flex flex-col gap-2 ml-4 items-start justify-between">
+                  <div
+                    className={
+                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      (selectedTabID == 0 ? " z-50" : "")
+                    }
+                  >
+                    <Image
+                      alt=""
+                      className="  "
+                      src={"/assets/fixed_1.png"}
+                      width={70}
+                      height={70}
+                      onClick={() => {
+                        setSelectedTabID(0);
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={
+                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      (selectedTabID == 1 ? " z-50" : "")
+                    }
+                  >
+                    <Image
+                      alt=""
+                      className="  "
+                      src={"/assets/fixed_2.png"}
+                      width={70}
+                      height={70}
+                      onClick={() => {
+                        setSelectedTabID(1);
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={
+                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      (selectedTabID == 2 ? " z-50" : "")
+                    }
+                  >
+                    <Image
+                      alt=""
+                      className="  "
+                      src={"/assets/fixed_3.png"}
+                      width={70}
+                      height={70}
+                      onClick={() => {
+                        setSelectedTabID(2);
+                      }}
+                    />
+                  </div>
+                  <div
+                    className={
+                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      (selectedTabID == 3 ? " z-50" : "")
+                    }
+                  >
+                    <Image
+                      alt=""
+                      className="  "
+                      src={"/assets/fixed_4.png"}
+                      width={70}
+                      height={70}
+                      onClick={() => {
+                        setSelectedTabID(3);
+                      }}
+                    />
+                  </div>
                 </div>
-                <div className="">
-                  <Image
-                    alt=""
-                    className="  "
-                    src={"/assets/fixed_2.png"}
-                    width={70}
-                    height={70}
-                  />
-                </div>
-                <div className="">
-                  <Image
-                    alt=""
-                    className="  "
-                    src={"/assets/fixed_3.png"}
-                    width={70}
-                    height={70}
-                  />
-                </div>
-                <div className="">
-                  <Image
-                    alt=""
-                    className="  "
-                    src={"/assets/fixed_4.png"}
-                    width={70}
-                    height={70}
-                  />
+                <div className="bg-[#F1ECDF] absolute left-[55px] top-0 bottom-0 right-[36px] overflow-hidden rounded-lg border-black border-2 z-30">
+                  <div className="h-[64px] border-b-[2px] border-black flex justify-center items-center">
+                    {/* Tab 1 */}
+                    {selectedTabID === 0 && <p className="text-xl">Oi</p>}
+
+                    {/* Tab 2 */}
+                    {selectedTabID === 1 && (
+                      <p className="text-xl">Cosmo Kyoto</p>
+                    )}
+
+                    {/* Tab 3 */}
+                    {selectedTabID === 2 && <div className="text-xl">Oi</div>}
+
+                    {/* Tab 4 */}
+                    {selectedTabID === 3 && <p className="text-xl">Vision</p>}
+                  </div>
+                  <div className="p-4">
+                    {/* Tab 1 */}
+                    {selectedTabID === 0 && (
+                      <div>
+                        <div className="px-4 flex gap-4">
+                          <p className="w-full">
+                            [On the Track, In Full Stride] Earth experiences an
+                            unprecedented phenomenon one day. As the
+                            gravitational pull suddenly weakens, stones that
+                            have been floating for a long time and were balanced
+                            by the Earth’s gravity, start to emerge. Cities
+                            across the globe are unexpectedly launched into
+                            space. Over time, the floating stones’ power
+                            dwindles slowly.
+                          </p>
+                          <p className="w-full">
+                            In a new world order where the concept of
+                            nation-states has disappeared, these floating stones
+                            have become essential resources for cities to
+                            survive. In a time where peace has existed for
+                            millennia, making traditional forms of warfare
+                            unnecessary, cities must find innovative ways to
+                            compete for the floating stones to ensure their
+                            safety. The competition is held in the form of a
+                            sports event known as Cosmo Athletic, where each
+                            city sends a representative athlete to take part.
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Tab 2 */}
+                    {selectedTabID === 1 && (
+                      <div>
+                        <div className="px-4">
+                          <p>
+                            The city, situated at the center of the floating
+                            district, is an amazing blend of Kyoto’s cultural
+                            heritage and cutting-edge cosmic technology. Kyoto’s
+                            soul blends harmoniously with the technology of the
+                            universe, creating a unique level of experiential
+                            wonder.
+                            <br />
+                            <br />
+                            Here, the essence of history and the wonders of
+                            advanced space technology come together in perfect
+                            harmony, and the “Cosmo Kyoto Stadium” serves as a
+                            symbolic location for this fusion.
+                            <br />
+                            <br />
+                            The stadium blends the charm of traditional Kyoto
+                            with advanced space-age technology, acting as a hub
+                            for diverse sporting events and innovative sports of
+                            the present and future. You can experience a unique
+                            blend of tradition and modernity at this
+                            destination, where peaceful temples and gardens
+                            exude the aroma of ancient culture.
+                            <br />
+                            <br />
+                            Try to visit Cosmo Kyoto. Here, you can witness the
+                            fusion of past and future, nature and technology,
+                            and discover the harmonious blend of space and
+                            Kyoto, along with all the manifestations of human
+                            creativity.
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Tab 3 */}
+                    {selectedTabID === 2 && (
+                      <div>
+                        <div className="px-4">
+                          <p>
+                            The city, situated at the center of the floating
+                            district, is an amazing blend of Kyoto’s cultural
+                            heritage and cutting-edge cosmic technology. Kyoto’s
+                            soul blends harmoniously with the technology of the
+                            universe, creating a unique level of experiential
+                            wonder.
+                            <br />
+                            <br />
+                            Here, the essence of history and the wonders of
+                            advanced space technology come together in perfect
+                            harmony, and the “Cosmo Kyoto Stadium” serves as a
+                            symbolic location for this fusion.
+                            <br />
+                            <br />
+                            The stadium blends the charm of traditional Kyoto
+                            with advanced space-age technology, acting as a hub
+                            for diverse sporting events and innovative sports of
+                            the present and future. You can experience a unique
+                            blend of tradition and modernity at this
+                            destination, where peaceful temples and gardens
+                            exude the aroma of ancient culture.
+                            <br />
+                            <br />
+                            Try to visit Cosmo Kyoto. Here, you can witness the
+                            fusion of past and future, nature and technology,
+                            and discover the harmonious blend of space and
+                            Kyoto, along with all the manifestations of human
+                            creativity.
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Tab 4 */}
+                    {selectedTabID === 3 && (
+                      <div>
+                        <div className="px-4">
+                          <p>
+                            Oi intends to introduce a new token at the same time
+                            as the Genesis Mint project is launched. The most
+                            critical aspect of the project is the token launch,
+                            which will happen quickly compared to any other
+                            task.
+                            <br />
+                            <br />
+                            Beyond the Genesis Mint project, there are plans to
+                            coordinate official licensing partnerships and
+                            carefully plan and construct a long-term ecosystem
+                            vision.
+                            <br />
+                            <br />
+                            To start with, we will provide merchandise to
+                            holders that has been jointly developed with
+                            designers from different brands and is not purely
+                            for display.
+                            <br />
+                            <br />
+                            The project will continuously improve, grow, and aim
+                            for further achievements by taking these steps.
+                            <br />
+                            <br />
+                            Oi has the necessary skills for the project and is
+                            enthusiastic about working with professionals who
+                            are truly passionate about the ongoing project. We
+                            are open to receiving genuine interest and backing
+                            for this project.
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
