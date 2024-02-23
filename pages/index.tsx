@@ -783,6 +783,31 @@ export default function Home() {
         <video muted loop playsInline>
           <source src="/desktop/tv_noise.webm" type="video/webm" />
         </video>
+
+        <Image
+          alt="AkaRanger"
+          className="object-cover"
+          src={"/nft/nft1.png"}
+          fill
+        />
+        <Image
+          alt="C.Master"
+          className="object-cover"
+          src={"/nft/nft2.png"}
+          fill
+        />
+        <Image
+          alt="K.Kun"
+          className="object-cover"
+          src={"/nft/nft3.png"}
+          fill
+        />
+        <Image
+          alt="Pen-Man"
+          className="object-cover"
+          src={"/nft/nft4.png"}
+          fill
+        />
       </div>
     </div>
   );
