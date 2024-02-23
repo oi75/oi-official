@@ -17,6 +17,7 @@ export default function Home() {
   const [videoLoad, setVideoLoad] = useState(false);
 
   const [selectedTabID, setSelectedTabID] = useState(0);
+  const [selectedNFTTabID, setSelectedNFTTabID] = useState(0);
 
   const [loadingGift, setLoadingGift] = useState(true);
   useEffect(() => {
@@ -337,8 +338,8 @@ export default function Home() {
             />
 
             <div className="z-40 absolute top-[17%] bottom-[10%] left-[20%] right-[24%] animate_scale">
-              <div className="pl-[10%] pr-[15%] py-[3%] w-full flex items-center justify-between">
-                <div className="flex items-center gap-5">
+              <div className="pl-[10%] pr-[5%] py-[3%] w-full flex items-center justify-between">
+                <div className="w-full flex items-center justify-end gap-5">
                   <a
                     href="https://www.discord.com"
                     target="_blank"
@@ -452,7 +453,65 @@ export default function Home() {
                     )}
 
                     {/* Tab 3 */}
-                    {selectedTabID === 2 && <div className="text-xl">Oi</div>}
+                    {selectedTabID === 2 && (
+                      <div className="text-xl">
+                        <div className="flex gap-2">
+                          <div
+                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            onClick={() => {
+                              setSelectedNFTTabID(0);
+                            }}
+                          >
+                            <Image
+                              alt="AkaRanger"
+                              className="object-cover"
+                              src={"/nft/nft1.png"}
+                              fill
+                            />
+                          </div>
+
+                          <div
+                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            onClick={() => {
+                              setSelectedNFTTabID(1);
+                            }}
+                          >
+                            <Image
+                              alt="C.Master"
+                              className="object-cover"
+                              src={"/nft/nft2.png"}
+                              fill
+                            />
+                          </div>
+                          <div
+                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            onClick={() => {
+                              setSelectedNFTTabID(2);
+                            }}
+                          >
+                            <Image
+                              alt="K.Kun"
+                              className="object-cover"
+                              src={"/nft/nft3.png"}
+                              fill
+                            />
+                          </div>
+                          <div
+                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            onClick={() => {
+                              setSelectedNFTTabID(3);
+                            }}
+                          >
+                            <Image
+                              alt="Pen-Man"
+                              className="object-cover"
+                              src={"/nft/nft4.png"}
+                              fill
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    )}
 
                     {/* Tab 4 */}
                     {selectedTabID === 3 && <p className="text-xl">Vision</p>}
@@ -538,39 +597,124 @@ export default function Home() {
 
                     {/* Tab 3 */}
                     {selectedTabID === 2 && (
-                      <div className="pb-16">
-                        <div className="px-4 ">
-                          <p>
-                            The city, situated at the center of the floating
-                            district, is an amazing blend of Kyoto’s cultural
-                            heritage and cutting-edge cosmic technology. Kyoto’s
-                            soul blends harmoniously with the technology of the
-                            universe, creating a unique level of experiential
-                            wonder.
-                            <br />
-                            <br />
-                            Here, the essence of history and the wonders of
-                            advanced space technology come together in perfect
-                            harmony, and the “Cosmo Kyoto Stadium” serves as a
-                            symbolic location for this fusion.
-                            <br />
-                            <br />
-                            The stadium blends the charm of traditional Kyoto
-                            with advanced space-age technology, acting as a hub
-                            for diverse sporting events and innovative sports of
-                            the present and future. You can experience a unique
-                            blend of tradition and modernity at this
-                            destination, where peaceful temples and gardens
-                            exude the aroma of ancient culture.
-                            <br />
-                            <br />
-                            Try to visit Cosmo Kyoto. Here, you can witness the
-                            fusion of past and future, nature and technology,
-                            and discover the harmonious blend of space and
-                            Kyoto, along with all the manifestations of human
-                            creativity.
-                            <br />
-                          </p>
+                      <div className="pb-16 h-full">
+                        <div className="px-6  h-full">
+                          {/* NFT 1 */}
+                          {selectedNFTTabID === 0 && (
+                            <div className="flex gap-8 h-full pb-4">
+                              <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
+                                <Image
+                                  alt="AkaRanger"
+                                  className="object-cover"
+                                  src={"/nft/nft1.png"}
+                                  fill
+                                />
+                              </div>
+                              <div className="basis-2/3">
+                                <h2 className="font-bold text-4xl mb-2">
+                                  AkaRanger
+                                </h2>
+                                <p>
+                                  A seasoned NFT and coin industry veteran and a
+                                  member of prominent exchange, has had a
+                                  significant impact. He has made a lasting
+                                  impact on the blockchain industry and has also
+                                  had a significant influence on various trades
+                                  and partnerships.
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* NFT 2 */}
+                          {selectedNFTTabID === 1 && (
+                            <div className="flex gap-8 h-full pb-4">
+                              <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
+                                <Image
+                                  alt="C.Master"
+                                  className="object-cover"
+                                  src={"/nft/nft2.png"}
+                                  fill
+                                />
+                              </div>
+                              <div className="basis-2/3">
+                                <h2 className="font-bold text-4xl mb-2">
+                                  C.Master
+                                </h2>
+                                <p>
+                                  As a team member of a major company in the
+                                  past, he has achieved quantitative results in
+                                  various development projects and is now a
+                                  seasoned veteran of the NFT industry. His
+                                  exceptional ability and passion will lead to
+                                  the creation of new quests and challenges on
+                                  his future journey, while his accomplishments
+                                  will continue to light up the blockchain
+                                  ecosystem.
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* NFT 3 */}
+                          {selectedNFTTabID === 2 && (
+                            <div className="flex gap-8 h-full pb-4">
+                              <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
+                                <Image
+                                  alt="K.Kun"
+                                  className="object-cover"
+                                  src={"/nft/nft3.png"}
+                                  fill
+                                />
+                              </div>
+                              <div className="basis-2/3">
+                                <h2 className="font-bold text-4xl mb-2">
+                                  K.Kun
+                                </h2>
+                                <p>
+                                  A seasoned software engineer and passionate
+                                  gamer, has spearheaded web and game
+                                  engineering teams and made valuable
+                                  contributions to numerous projects at
+                                  Blizzard, a highly acclaimed gaming firm. In
+                                  both gaming and business, he has achieved
+                                  remarkable success.
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* NFT 4 */}
+                          {selectedNFTTabID === 3 && (
+                            <div className="flex gap-8 h-full pb-4">
+                              <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
+                                <Image
+                                  alt="Pen-Man"
+                                  className="object-cover"
+                                  src={"/nft/nft4.png"}
+                                  fill
+                                />
+                              </div>
+                              <div className="basis-2/3">
+                                <h2 className="font-bold text-4xl mb-2">
+                                  Pen-Man
+                                </h2>
+                                <p>
+                                  He has worked closely with animation
+                                  powerhouses such as Nickelodeon, BlueSky
+                                  Studios, and Bento Box Entertainment on
+                                  multiple projects, gaining extensive
+                                  experience in collaboration. He has made
+                                  contributions that span across a variety of
+                                  media, including television programs and
+                                  cartoon series for children and teenagers, as
+                                  well as popular computer-animated films. As a
+                                  result, he is extremely skilled in the field
+                                  of animation.
+                                </p>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
                     )}
