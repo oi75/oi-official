@@ -27,10 +27,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    console.log("video load", videoLoad);
+    // console.log("video load", videoLoad);
     if (backgrondLoad && videoLoad) {
       setTimeout(() => {
-        console.log("walking", walking);
+        // console.log("walking", walking);
         setWalking(100);
       }, 5000);
     }
@@ -337,7 +337,7 @@ export default function Home() {
               height={2000}
             />
 
-            <div className="z-40 absolute top-[17%] bottom-[10%] left-[20%] right-[24%] animate_scale">
+            <div className="z-40 absolute top-[17%] bottom-[17%] left-[20%] right-[24%] animate_scale">
               <div className="pl-[10%] pr-[5%] py-[3%] w-full flex items-center justify-between">
                 <div className="w-full flex items-center justify-end gap-5">
                   <a
@@ -369,10 +369,10 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className="relative"
-                style={{ height: "calc(100% - 180px)" }}
+                className="relative pb-8"
+                style={{ height: "calc(100% - 100px)" }}
               >
-                <div className="h-full py-4 flex flex-col gap-2 ml-4 items-start justify-between">
+                <div className="h-full py-4 flex flex-col gap-2 ml-4 items-start justify-around">
                   <div
                     className={
                       "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
@@ -442,7 +442,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#F1ECDF] absolute left-[55px] top-0 bottom-0 right-[36px] overflow-hidden rounded-lg border-black border-2 z-30">
+                <div className="bg-[#F1ECDF] absolute left-[55px] top-0 bottom-[2%] right-[36px] overflow-hidden rounded-lg border-black border-2 z-30">
                   <div className="h-[64px] border-b-[2px] border-black flex justify-center items-center">
                     {/* Tab 1 */}
                     {selectedTabID === 0 && <p className="text-xl">Oi</p>}
