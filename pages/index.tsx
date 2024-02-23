@@ -272,10 +272,10 @@ export default function Home() {
         onClose={() => {
           setOpenTV(false);
         }}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
-          className="w-full h-full p-16 flex justify-center items-center"
+          className="w-[100vh] lg:w-full h-full lg:p-16 flex justify-center items-end lg:items-center rotate-90 lg:rotate-0"
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -312,10 +312,10 @@ export default function Home() {
         onClose={() => {
           setOpen2(false);
         }}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
-          className="w-full h-full p-16 flex justify-center items-center select-none"
+          className="w-[100vh] lg:w-full h-full rotate-90 lg:rotate-0 lg:p-16 flex justify-center items-end lg:items-center select-none"
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -521,7 +521,7 @@ export default function Home() {
                     {selectedTabID === 0 && (
                       <div className="pb-16">
                         <div className="px-4 flex gap-8">
-                          <p className="w-full">
+                          <p className="w-full text-xs lg:text-base">
                             [On the Track, In Full Stride]
                             <br />
                             Earth experiences an unprecedented phenomenon one
@@ -537,7 +537,7 @@ export default function Home() {
                             Over time, the floating stones’ power dwindles
                             slowly.
                           </p>
-                          <p className="w-full">
+                          <p className="w-full text-xs lg:text-base">
                             In a new world order where the concept of
                             nation-states has disappeared, these floating stones
                             have become essential resources for cities to
