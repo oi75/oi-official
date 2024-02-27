@@ -338,7 +338,7 @@ export default function Home() {
             />
 
             <div className="z-40 absolute top-[17%] bottom-[17%] left-[20%] right-[24%] animate_scale">
-              <div className="pl-[10%] pr-[5%] py-[3%] w-full flex items-center justify-between">
+              <div className="pl-[10%] pr-[5%] pt-[4%] pb-[2%] w-full flex items-center justify-between">
                 <div className="w-full flex items-center justify-end gap-5">
                   <a
                     href="https://www.discord.com"
@@ -354,14 +354,14 @@ export default function Home() {
                     />
                   </a>
                   <a
-                    href="https://www.twitter.com"
+                    href="https://twitter.com/Oi_1990s"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
                       alt=""
                       className=" cursor-pointer "
-                      src={"/assets/twitter.png"}
+                      src={"/assets/x.png"}
                       width={40}
                       height={40}
                     />
