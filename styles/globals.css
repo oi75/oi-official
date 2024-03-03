@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Algol";
+  src: url("/fonts/Algol Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bevan";
+  src: url("/fonts/Bevan-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bevan";
+  src: url("/fonts/Bevan-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 *::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none; /* IE and Edge */

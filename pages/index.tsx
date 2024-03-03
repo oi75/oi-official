@@ -445,11 +445,13 @@ export default function Home() {
                 <div className="bg-[#F1ECDF] absolute left-[55px] top-0 bottom-[2%] right-[36px] overflow-hidden rounded-lg border-black border-2 z-30">
                   <div className="h-[64px] border-b-[2px] border-black flex justify-center items-center">
                     {/* Tab 1 */}
-                    {selectedTabID === 0 && <p className="text-xl">Oi</p>}
+                    {selectedTabID === 0 && (
+                      <p className="text-xl font-[Bevan]">Oi</p>
+                    )}
 
                     {/* Tab 2 */}
                     {selectedTabID === 1 && (
-                      <p className="text-xl">Cosmo Kyoto</p>
+                      <p className="text-xl font-[Bevan]">Cosmo Kyoto</p>
                     )}
 
                     {/* Tab 3 */}
@@ -514,14 +516,16 @@ export default function Home() {
                     )}
 
                     {/* Tab 4 */}
-                    {selectedTabID === 3 && <p className="text-xl">Vision</p>}
+                    {selectedTabID === 3 && (
+                      <p className="text-xl font-[Bevan]">Vision</p>
+                    )}
                   </div>
                   <div className="h-full relativel overflow-auto p-4">
                     {/* Tab 1 */}
                     {selectedTabID === 0 && (
                       <div className="pb-16">
                         <div className="px-4 flex gap-8">
-                          <p className="w-full text-xs lg:text-base">
+                          <p className="w-full text-xs lg:text-base font-[Algol]">
                             [On the Track, In Full Stride]
                             <br />
                             Earth experiences an unprecedented phenomenon one
@@ -537,7 +541,7 @@ export default function Home() {
                             Over time, the floating stones’ power dwindles
                             slowly.
                           </p>
-                          <p className="w-full text-xs lg:text-base">
+                          <p className="w-full text-xs lg:text-base font-[Algol]">
                             In a new world order where the concept of
                             nation-states has disappeared, these floating stones
                             have become essential resources for cities to
@@ -560,7 +564,7 @@ export default function Home() {
                     {selectedTabID === 1 && (
                       <div className="pb-16">
                         <div className="px-4 h-full">
-                          <p className="">
+                          <p className=" font-[Algol]">
                             The city, situated at the center of the floating
                             district, is an amazing blend of Kyoto’s cultural
                             heritage and cutting-edge cosmic technology. Kyoto’s
@@ -611,10 +615,10 @@ export default function Home() {
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2">
+                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
                                   AkaRanger
                                 </h2>
-                                <p>
+                                <p className=" font-[Algol]">
                                   A seasoned NFT and coin industry veteran and a
                                   member of prominent exchange, has had a
                                   significant impact. He has made a lasting
@@ -638,10 +642,10 @@ export default function Home() {
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2">
+                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
                                   C.Master
                                 </h2>
-                                <p>
+                                <p className=" font-[Algol]">
                                   As a team member of a major company in the
                                   past, he has achieved quantitative results in
                                   various development projects and is now a
@@ -668,10 +672,10 @@ export default function Home() {
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2">
+                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
                                   K.Kun
                                 </h2>
-                                <p>
+                                <p className=" font-[Algol]">
                                   A seasoned software engineer and passionate
                                   gamer, has spearheaded web and game
                                   engineering teams and made valuable
@@ -696,10 +700,10 @@ export default function Home() {
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2">
+                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
                                   Pen-Man
                                 </h2>
-                                <p>
+                                <p className=" font-[Algol]">
                                   He has worked closely with animation
                                   powerhouses such as Nickelodeon, BlueSky
                                   Studios, and Bento Box Entertainment on
@@ -723,7 +727,7 @@ export default function Home() {
                     {selectedTabID === 3 && (
                       <div className="pb-16">
                         <div className="px-4">
-                          <p>
+                          <p className=" font-[Algol]">
                             Oi intends to introduce a new token at the same time
                             as the Genesis Mint project is launched. The most
                             critical aspect of the project is the token launch,
