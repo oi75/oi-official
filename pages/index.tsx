@@ -6,6 +6,8 @@ import TabletModal from "@/components/TabletModal";
 import Modal from "@mui/joy/Modal";
 import { ModalDialog } from "@mui/joy";
 
+import "remixicon/fonts/remixicon.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -32,7 +34,7 @@ export default function Home() {
       setTimeout(() => {
         // console.log("walking", walking);
         setWalking(100);
-      }, 5000);
+      }, 6000);
     }
   }, [backgrondLoad, videoLoad]);
 
@@ -85,7 +87,7 @@ export default function Home() {
   return (
     <div className="relative  w-full ">
       {walking === null && (
-        <div className=" fixed flex-col  lg:hidden top-[300px] left-[100px]  z-50  justify-center">
+        <div className=" fixed flex-col lg:hidden top-[300px] left-[100px]  z-50  justify-center">
           <Image
             alt=""
             onClick={() => setOpenTV(true)}
@@ -97,6 +99,16 @@ export default function Home() {
           <h1 className=" text-[20px] w-[150px] text-black font-bold">
             Swipe to move in any direction
           </h1>
+        </div>
+      )}
+      {!walking && (
+        <div>
+          <div className="fixed bottom-0 left-1/2 animate-pulse z-50">
+            <i className="ri-arrow-down-s-fill text-white text-4xl"></i>
+          </div>
+          <div className="fixed top-1/2 right-4 animate-pulse z-50">
+            <i className="ri-arrow-right-s-fill text-white text-4xl"></i>
+          </div>
         </div>
       )}
       <div className="items">
