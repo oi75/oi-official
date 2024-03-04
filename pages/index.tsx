@@ -101,7 +101,7 @@ export default function Home() {
           </h1>
         </div>
       )}
-      {!walking && (
+      {
         <div>
           <div className="fixed bottom-0 left-1/2 animate-pulse z-50">
             <i className="ri-arrow-down-s-fill text-white text-4xl"></i>
@@ -110,7 +110,7 @@ export default function Home() {
             <i className="ri-arrow-right-s-fill text-white text-4xl"></i>
           </div>
         </div>
-      )}
+      }
       <div className="items">
         {/* {isDayTime ? ( */}
         <div className="item relative">
@@ -622,7 +622,7 @@ export default function Home() {
                                 <Image
                                   alt="AkaRanger"
                                   className="object-cover"
-                                  src={"/nft/nft1.png"}
+                                  src={"/nft/nft1.webp"}
                                   fill
                                 />
                               </div>
@@ -649,7 +649,7 @@ export default function Home() {
                                 <Image
                                   alt="C.Master"
                                   className="object-cover"
-                                  src={"/nft/nft2.png"}
+                                  src={"/nft/nft2.webp"}
                                   fill
                                 />
                               </div>
@@ -679,7 +679,7 @@ export default function Home() {
                                 <Image
                                   alt="K.Kun"
                                   className="object-cover"
-                                  src={"/nft/nft3.png"}
+                                  src={"/nft/nft3.webp"}
                                   fill
                                 />
                               </div>
@@ -707,7 +707,7 @@ export default function Home() {
                                 <Image
                                   alt="Pen-Man"
                                   className="object-cover"
-                                  src={"/nft/nft4.png"}
+                                  src={"/nft/nft4.webp"}
                                   fill
                                 />
                               </div>
