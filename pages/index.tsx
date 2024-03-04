@@ -287,7 +287,7 @@ export default function Home() {
         // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
-          className="w-[100vh] lg:w-full h-full lg:p-16 flex justify-center items-end lg:items-center rotate-90 lg:rotate-0"
+          className="w-[100vh] lg:w-full h-full lg:p-16 flex items-end lg:items-stretch rotate-90 lg:rotate-0"
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -297,12 +297,12 @@ export default function Home() {
           <div className="relative select-none object-contain">
             <Image
               alt=""
-              className="select-none h-full w-full relative z-30 object-contain animate_scale"
+              className="select-none h-full w-full relative z-30 object-contain"
               src={"/assets/tv_retro.webp"}
               width={2000}
               height={2000}
             />
-            <div className="absolute top-[0%] bottom-[0%] left-[10%] right-[10%] animate_scale">
+            <div className="absolute top-[0%] bottom-[0%] left-[10%] right-[10%]">
               <video
                 autoPlay
                 muted
