@@ -781,7 +781,7 @@ export default function Home() {
         </div>
       </Modal>
 
-      <div className="opacity-0">
+      <div className="opacity-0 w-0 h-0 overflow-hidden">
         <Image
           alt="TV"
           className=""
