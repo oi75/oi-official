@@ -639,7 +639,7 @@ export default function Home() {
                     {selectedTabID === 1 && (
                       <div className="pb-16">
                         <div className="px-4 h-full">
-                          <p className=" font-[Algol]">
+                          <p className="text-xs lg:text-md font-[Algol]">
                             The city, situated at the center of the floating
                             district, is an amazing blend of Kyoto’s cultural
                             heritage and cutting-edge cosmic technology. Kyoto’s
@@ -680,7 +680,7 @@ export default function Home() {
                         <div className="px-6  h-full">
                           {/* NFT 1 */}
                           {selectedNFTTabID === 0 && (
-                            <div className="flex gap-8 h-full pb-4">
+                            <div className="flex gap-4 lg:gap-8 h-full pb-4">
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="AkaRanger"
@@ -693,7 +693,7 @@ export default function Home() {
                                 <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   AkaRanger
                                 </h2>
-                                <p className=" font-[Algol]">
+                                <p className="text-xs lg:text-md font-[Algol]">
                                   A seasoned NFT and coin industry veteran and a
                                   member of prominent exchange, has had a
                                   significant impact. He has made a lasting
@@ -707,7 +707,7 @@ export default function Home() {
 
                           {/* NFT 2 */}
                           {selectedNFTTabID === 1 && (
-                            <div className="flex gap-8 h-full pb-4">
+                            <div className="flex gap-4 lg:gap-8 h-full pb-4">
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="C.Master"
@@ -720,7 +720,7 @@ export default function Home() {
                                 <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   C.Master
                                 </h2>
-                                <p className=" font-[Algol]">
+                                <p className="text-xs lg:text-md font-[Algol]">
                                   As a team member of a major company in the
                                   past, he has achieved quantitative results in
                                   various development projects and is now a
@@ -737,7 +737,7 @@ export default function Home() {
 
                           {/* NFT 3 */}
                           {selectedNFTTabID === 2 && (
-                            <div className="flex gap-8 h-full pb-4">
+                            <div className="flex gap-4 lg:gap-8 h-full pb-4">
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="K.Kun"
@@ -750,7 +750,7 @@ export default function Home() {
                                 <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   K.Kun
                                 </h2>
-                                <p className=" font-[Algol]">
+                                <p className="text-xs lg:text-md font-[Algol]">
                                   A seasoned software engineer and passionate
                                   gamer, has spearheaded web and game
                                   engineering teams and made valuable
@@ -765,7 +765,7 @@ export default function Home() {
 
                           {/* NFT 4 */}
                           {selectedNFTTabID === 3 && (
-                            <div className="flex gap-8 h-full pb-4">
+                            <div className="flex gap-4 lg:gap-8 h-full pb-4">
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="Pen-Man"
@@ -778,7 +778,7 @@ export default function Home() {
                                 <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   Pen-Man
                                 </h2>
-                                <p className=" font-[Algol]">
+                                <p className="text-xs lg:text-md font-[Algol]">
                                   He has worked closely with animation
                                   powerhouses such as Nickelodeon, BlueSky
                                   Studios, and Bento Box Entertainment on
@@ -802,7 +802,7 @@ export default function Home() {
                     {selectedTabID === 3 && (
                       <div className="pb-16">
                         <div className="px-4">
-                          <p className=" font-[Algol]">
+                          <p className="text-xs lg:text-md font-[Algol]">
                             Oi intends to introduce a new token at the same time
                             as the Genesis Mint project is launched. The most
                             critical aspect of the project is the token launch,
