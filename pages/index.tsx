@@ -109,6 +109,12 @@ export default function Home() {
           <div className="fixed top-1/2 right-4 animate-pulse z-50">
             <i className="ri-arrow-right-s-fill text-white text-4xl"></i>
           </div>
+          <div className="fixed top-0 left-1/2 animate-pulse z-50">
+            <i className="ri-arrow-up-s-fill text-white text-4xl"></i>
+          </div>
+          <div className="fixed top-1/2 left-4 animate-pulse z-50">
+            <i className="ri-arrow-left-s-fill text-white text-4xl"></i>
+          </div>
         </div>
       }
       <div className="items">
@@ -287,7 +293,7 @@ export default function Home() {
         // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
-          className="w-[100vh] lg:w-full h-full lg:p-16 flex items-end lg:items-stretch rotate-90 lg:rotate-0"
+          className="w-[100vh] h-[100vw] -translate-x-1/3 translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:w-full lg:h-full lg:p-16 flex items-end lg:items-stretch rotate-90 lg:rotate-0"
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -302,7 +308,7 @@ export default function Home() {
               width={2000}
               height={2000}
             />
-            <div className="absolute top-[0%] bottom-[0%] left-[10%] right-[10%]">
+            <div className="absolute top-[0%] bottom-[0%] left-[12%] right-[12%]">
               <video
                 autoPlay
                 muted
@@ -351,7 +357,7 @@ export default function Home() {
 
             <div className="z-40 absolute top-[17%] bottom-[17%] left-[20%] right-[24%] animate_scale">
               <div className="pl-[10%] pr-[5%] pt-[4%] pb-[2%] w-full flex items-center justify-between">
-                <div className="w-full flex items-center justify-end gap-5">
+                <div className="w-full flex items-center justify-end gap-2 lg:gap-5">
                   <a
                     href="https://www.discord.com"
                     target="_blank"
@@ -359,10 +365,18 @@ export default function Home() {
                   >
                     <Image
                       alt=""
-                      className=" cursor-pointer "
+                      className=" cursor-pointer lg:block hidden"
                       src={"/assets/discord.png"}
                       width={40}
                       height={40}
+                    />
+
+                    <Image
+                      alt=""
+                      className=" cursor-pointer block lg:hidden"
+                      src={"/assets/discord.png"}
+                      width={30}
+                      height={30}
                     />
                   </a>
                   <a
@@ -372,28 +386,36 @@ export default function Home() {
                   >
                     <Image
                       alt=""
-                      className=" cursor-pointer "
+                      className=" cursor-pointer lg:block hidden"
                       src={"/assets/x.png"}
                       width={40}
                       height={40}
+                    />
+
+                    <Image
+                      alt=""
+                      className=" cursor-pointer block lg:hidden"
+                      src={"/assets/x.png"}
+                      width={30}
+                      height={30}
                     />
                   </a>
                 </div>
               </div>
               <div
-                className="relative pb-8"
-                style={{ height: "calc(100% - 100px)" }}
+                className="relative pb-2 lg:pb-8"
+                style={{ height: "calc(90% - 40px)" }}
               >
-                <div className="h-full py-4 flex flex-col gap-2 ml-4 items-start justify-around">
+                <div className="h-full py-4 flex flex-col gap-2 ml-8 lg:ml-4 items-start justify-around">
                   <div
                     className={
-                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                       (selectedTabID == 0 ? " z-50" : "")
                     }
                   >
                     <Image
                       alt=""
-                      className="  "
+                      className="lg:block hidden"
                       src={"/assets/fixed_1.png"}
                       width={70}
                       height={70}
@@ -401,16 +423,27 @@ export default function Home() {
                         setSelectedTabID(0);
                       }}
                     />
+
+                    <Image
+                      alt=""
+                      className="block lg:hidden"
+                      src={"/assets/fixed_1.png"}
+                      width={36}
+                      height={36}
+                      onClick={() => {
+                        setSelectedTabID(0);
+                      }}
+                    />
                   </div>
                   <div
                     className={
-                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                       (selectedTabID == 1 ? " z-50" : "")
                     }
                   >
                     <Image
                       alt=""
-                      className="  "
+                      className="lg:block hidden"
                       src={"/assets/fixed_2.png"}
                       width={70}
                       height={70}
@@ -418,16 +451,26 @@ export default function Home() {
                         setSelectedTabID(1);
                       }}
                     />
+                    <Image
+                      alt=""
+                      className="block lg:hidden "
+                      src={"/assets/fixed_2.png"}
+                      width={36}
+                      height={36}
+                      onClick={() => {
+                        setSelectedTabID(1);
+                      }}
+                    />
                   </div>
                   <div
                     className={
-                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                       (selectedTabID == 2 ? " z-50" : "")
                     }
                   >
                     <Image
                       alt=""
-                      className="  "
+                      className="lg:block hidden"
                       src={"/assets/fixed_3.png"}
                       width={70}
                       height={70}
@@ -435,16 +478,26 @@ export default function Home() {
                         setSelectedTabID(2);
                       }}
                     />
+                    <Image
+                      alt=""
+                      className="block lg:hidden"
+                      src={"/assets/fixed_3.png"}
+                      width={36}
+                      height={36}
+                      onClick={() => {
+                        setSelectedTabID(2);
+                      }}
+                    />
                   </div>
                   <div
                     className={
-                      "overflow-hidden rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                      "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                       (selectedTabID == 3 ? " z-50" : "")
                     }
                   >
                     <Image
                       alt=""
-                      className="  "
+                      className="lg:block hidden"
                       src={"/assets/fixed_4.png"}
                       width={70}
                       height={70}
@@ -452,10 +505,20 @@ export default function Home() {
                         setSelectedTabID(3);
                       }}
                     />
+                    <Image
+                      alt=""
+                      className="block lg:hidden"
+                      src={"/assets/fixed_4.png"}
+                      width={36}
+                      height={36}
+                      onClick={() => {
+                        setSelectedTabID(3);
+                      }}
+                    />
                   </div>
                 </div>
                 <div className="bg-[#F1ECDF] absolute left-[55px] top-0 bottom-[2%] right-[36px] overflow-hidden rounded-lg border-black border-2 z-30">
-                  <div className="h-[64px] border-b-[2px] border-black flex justify-center items-center">
+                  <div className="h-[36px] lg:h-[64px] border-b-[2px] border-black flex justify-center items-center">
                     {/* Tab 1 */}
                     {selectedTabID === 0 && (
                       <p className="text-xl font-[Bevan]">Oi</p>
@@ -471,54 +534,54 @@ export default function Home() {
                       <div className="text-xl">
                         <div className="flex gap-2">
                           <div
-                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
                             onClick={() => {
                               setSelectedNFTTabID(0);
                             }}
                           >
                             <Image
                               alt="AkaRanger"
-                              className="object-cover"
+                              className="object-cover object-center"
                               src={"/nft/nft1.png"}
                               fill
                             />
                           </div>
 
                           <div
-                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
                             onClick={() => {
                               setSelectedNFTTabID(1);
                             }}
                           >
                             <Image
                               alt="C.Master"
-                              className="object-cover"
+                              className="object-cover object-center"
                               src={"/nft/nft2.png"}
                               fill
                             />
                           </div>
                           <div
-                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
                             onClick={() => {
                               setSelectedNFTTabID(2);
                             }}
                           >
                             <Image
                               alt="K.Kun"
-                              className="object-cover"
+                              className="object-cover object-center"
                               src={"/nft/nft3.png"}
                               fill
                             />
                           </div>
                           <div
-                            className="relative overflow-hidden rounded-full w-10 h-10"
+                            className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
                             onClick={() => {
                               setSelectedNFTTabID(3);
                             }}
                           >
                             <Image
                               alt="Pen-Man"
-                              className="object-cover"
+                              className="object-cover object-center"
                               src={"/nft/nft4.png"}
                               fill
                             />
@@ -621,13 +684,13 @@ export default function Home() {
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="AkaRanger"
-                                  className="object-cover"
+                                  className="object-cover object-center"
                                   src={"/nft/nft1.webp"}
                                   fill
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
+                                <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   AkaRanger
                                 </h2>
                                 <p className=" font-[Algol]">
@@ -648,13 +711,13 @@ export default function Home() {
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="C.Master"
-                                  className="object-cover"
+                                  className="object-cover object-center"
                                   src={"/nft/nft2.webp"}
                                   fill
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
+                                <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   C.Master
                                 </h2>
                                 <p className=" font-[Algol]">
@@ -678,13 +741,13 @@ export default function Home() {
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="K.Kun"
-                                  className="object-cover"
+                                  className="object-cover object-center"
                                   src={"/nft/nft3.webp"}
                                   fill
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
+                                <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   K.Kun
                                 </h2>
                                 <p className=" font-[Algol]">
@@ -706,13 +769,13 @@ export default function Home() {
                               <div className="basis-1/3 relative w-full h-full border-black border-solid border-2">
                                 <Image
                                   alt="Pen-Man"
-                                  className="object-cover"
+                                  className="object-cover  object-center"
                                   src={"/nft/nft4.webp"}
                                   fill
                                 />
                               </div>
                               <div className="basis-2/3">
-                                <h2 className="font-bold text-4xl mb-2 font-[Bevan]">
+                                <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                   Pen-Man
                                 </h2>
                                 <p className=" font-[Algol]">
