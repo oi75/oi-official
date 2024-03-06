@@ -293,7 +293,13 @@ export default function Home() {
         // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
-          className="w-[100vh] h-[100vw] -translate-x-1/3 translate-y-1/2 lg:translate-x-0 lg:translate-y-0 lg:w-full lg:h-full lg:p-16 flex items-end lg:items-stretch rotate-90 lg:rotate-0"
+          className={
+            "w-[100vh] h-[100vw] outline-none " +
+            "-translate-x-1/3 translate-y-1/2 lg:translate-x-0 lg:translate-y-0" +
+            " lg:w-full lg:h-full lg:p-16 " +
+            "flex items-end lg:items-stretch " +
+            "rotate-90 lg:rotate-0"
+          }
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -333,7 +339,7 @@ export default function Home() {
         // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
-          className="w-[100vh] lg:w-full h-full rotate-90 lg:rotate-0 lg:p-16 flex justify-center items-end lg:items-center select-none"
+          className="w-[100vh] outline-none lg:w-full h-full rotate-90 lg:rotate-0 lg:p-16 flex justify-center items-end lg:items-center select-none"
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
