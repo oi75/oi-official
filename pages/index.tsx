@@ -621,8 +621,7 @@ export default function Home() {
                             <br />
                             Over time, the floating stones’ power dwindles
                             slowly.
-                          </p>
-                          <p className="w-full text-xs lg:text-base font-[Algol]">
+                            <br />
                             In a new world order where the concept of
                             nation-states has disappeared, these floating stones
                             have become essential resources for cities to
