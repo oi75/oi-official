@@ -348,9 +348,16 @@ export default function Home() {
             setOpen2(false);
           }}
         >
-          <div className="w-[100vh] h-[100vw] outline-none lg:w-full lg:h-auto lg:p-16 select-none">
+          <div
+            className="w-[100vh] h-[100vw] outline-none lg:w-full lg:h-auto lg:p-16 select-none"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setOpen2(false);
+            }}
+          >
             <div
-              className="h-full lg:h-auto relative select-none object-contain"
+              className="h-full lg:h-auto relative select-none object-contain outline-none"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -358,13 +365,24 @@ export default function Home() {
             >
               <Image
                 alt=""
-                className="w-full h-full select-none object-contain relative z-30 animate_scale"
+                className="w-full h-full select-none object-contain relative z-20 animate_scale"
                 src={"/assets/tablet_11.webp"}
                 width={2000}
                 height={2000}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setOpen2(false);
+                }}
               />
 
-              <div className="z-40 absolute top-[17%] bottom-[17%] left-[22%] lg:left-[20%] right-[25%] lg:right-[24%] animate_scale">
+              <div
+                className="z-40 absolute top-[17%] bottom-[17%] left-[22%] lg:left-[20%] right-[25%] lg:right-[24%] animate_scale"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                }}
+              >
                 <div className="pl-[10%] pr-[5%] pt-[4%] pb-[2%] w-full flex items-center justify-between">
                   <div className="w-full flex items-center justify-end gap-2 lg:gap-5">
                     <a
@@ -415,7 +433,7 @@ export default function Home() {
                   className="relative pb-2 lg:pb-8"
                   style={{ height: "calc(90% - 40px)" }}
                 >
-                  <div className="h-full lg:py-4 flex flex-col gap-2 ml-8 lg:ml-4 items-start justify-around">
+                  <div className="h-full lg:py-4 flex flex-col gap-2 ml-1 lg:ml-4 items-start justify-around">
                     <div
                       className={
                         "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
@@ -526,7 +544,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className="bg-[#F1ECDF] absolute left-[55px] top-0 bottom-[2%] right-[36px] overflow-hidden rounded-lg border-black border-2 z-30">
+                  <div className="bg-[#F1ECDF] absolute left-[25px] lg:left-[55px] top-0 bottom-[1%] right-[14px] lg:right-[36px] overflow-hidden rounded-lg border-black border-2 z-30">
                     <div className="h-[36px] lg:h-[64px] border-b-[2px] border-black flex justify-center items-center">
                       {/* Tab 1 */}
                       {selectedTabID === 0 && (
@@ -685,7 +703,7 @@ export default function Home() {
 
                       {/* Tab 3 */}
                       {selectedTabID === 2 && (
-                        <div className="pb-16 h-full">
+                        <div className="pb-4 lg:pb-16 h-full">
                           <div className="px-6  h-full">
                             {/* NFT 1 */}
                             {selectedNFTTabID === 0 && (
