@@ -365,7 +365,7 @@ export default function Home() {
             >
               <Image
                 alt=""
-                className="w-full h-full select-none object-contain relative z-20 animate_scale"
+                className="w-full h-full select-none object-contain relative z-20"
                 src={"/assets/tablet_11.webp"}
                 width={2000}
                 height={2000}
@@ -377,7 +377,7 @@ export default function Home() {
               />
 
               <div
-                className="z-40 absolute top-[17%] bottom-[17%] left-[22%] lg:left-[20%] right-[25%] lg:right-[24%] animate_scale"
+                className="z-40 absolute top-[17%] bottom-[17%] left-[22%] lg:left-[20%] right-[25%] lg:right-[24%]"
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
@@ -883,7 +883,7 @@ export default function Home() {
         />
         <Image
           alt=""
-          className="w-full h-full select-none object-contain relative z-30 animate_scale"
+          className="w-full h-full select-none object-contain relative z-30"
           src={"/assets/tablet_11.webp"}
           width={2000}
           height={2000}
