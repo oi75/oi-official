@@ -548,17 +548,17 @@ export default function Home() {
                     <div className="h-[36px] lg:h-[64px] border-b-[2px] border-black flex justify-center items-center">
                       {/* Tab 1 */}
                       {selectedTabID === 0 && (
-                        <p className="text-xl font-[Bevan]">Oi</p>
+                        <p className="text-2xl font-[Bevan]">Oi</p>
                       )}
 
                       {/* Tab 2 */}
                       {selectedTabID === 1 && (
-                        <p className="text-xl font-[Bevan]">Cosmo Kyoto</p>
+                        <p className="text-2xl font-[Bevan]">Cosmo Kyoto</p>
                       )}
 
                       {/* Tab 3 */}
                       {selectedTabID === 2 && (
-                        <div className="text-xl">
+                        <div className="text-2xl">
                           <div className="flex gap-2">
                             <div
                               className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
@@ -619,7 +619,7 @@ export default function Home() {
 
                       {/* Tab 4 */}
                       {selectedTabID === 3 && (
-                        <p className="text-xl font-[Bevan]">Vision</p>
+                        <p className="text-2xl font-[Bevan]">Vision</p>
                       )}
                     </div>
                     <div className="h-full relativel overflow-auto p-4">
@@ -717,7 +717,7 @@ export default function Home() {
                                   />
                                 </div>
                                 <div className="basis-2/3">
-                                  <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
+                                  <h2 className="font-bold text-2xl lg:text-4xl mb-2 font-[Bevan]">
                                     AkaRanger
                                   </h2>
                                   <p className="text-xs lg:text-lg font-[Algol]">
@@ -744,7 +744,7 @@ export default function Home() {
                                   />
                                 </div>
                                 <div className="basis-2/3">
-                                  <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
+                                  <h2 className="font-bold text-2xl lg:text-4xl mb-2 font-[Bevan]">
                                     C.Master
                                   </h2>
                                   <p className="text-xs lg:text-lg font-[Algol]">
@@ -774,7 +774,7 @@ export default function Home() {
                                   />
                                 </div>
                                 <div className="basis-2/3">
-                                  <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
+                                  <h2 className="font-bold text-2xl lg:text-4xl mb-2 font-[Bevan]">
                                     K.Kun
                                   </h2>
                                   <p className="text-xs lg:text-lg font-[Algol]">
@@ -802,7 +802,7 @@ export default function Home() {
                                   />
                                 </div>
                                 <div className="basis-2/3">
-                                  <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
+                                  <h2 className="font-bold text-2xl lg:text-4xl mb-2 font-[Bevan]">
                                     Pen-Man
                                   </h2>
                                   <p className="text-xs lg:text-lg font-[Algol]">
