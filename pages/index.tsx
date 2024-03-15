@@ -627,7 +627,7 @@ export default function Home() {
                       {selectedTabID === 0 && (
                         <div className="pb-16">
                           <div className="px-4 flex gap-8">
-                            <p className="w-full text-xs lg:text-base font-[Algol]">
+                            <p className="w-full text-xs lg:text-lg font-[Algol]">
                               [On the Track, In Full Stride]
                               <br />
                               Earth experiences an unprecedented phenomenon one
@@ -665,7 +665,7 @@ export default function Home() {
                       {selectedTabID === 1 && (
                         <div className="pb-16">
                           <div className="px-4 h-full">
-                            <p className="text-xs lg:text-base font-[Algol]">
+                            <p className="text-xs lg:text-lg font-[Algol]">
                               The city, situated at the center of the floating
                               district, is an amazing blend of Kyoto’s cultural
                               heritage and cutting-edge cosmic technology.
@@ -720,7 +720,7 @@ export default function Home() {
                                   <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                     AkaRanger
                                   </h2>
-                                  <p className="text-xs lg:text-base font-[Algol]">
+                                  <p className="text-xs lg:text-lg font-[Algol]">
                                     A seasoned NFT and coin industry veteran and
                                     a member of prominent exchange, has had a
                                     significant impact. He has made a lasting
@@ -747,7 +747,7 @@ export default function Home() {
                                   <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                     C.Master
                                   </h2>
-                                  <p className="text-xs lg:text-base font-[Algol]">
+                                  <p className="text-xs lg:text-lg font-[Algol]">
                                     As a team member of a major company in the
                                     past, he has achieved quantitative results
                                     in various development projects and is now a
@@ -777,7 +777,7 @@ export default function Home() {
                                   <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                     K.Kun
                                   </h2>
-                                  <p className="text-xs lg:text-base font-[Algol]">
+                                  <p className="text-xs lg:text-lg font-[Algol]">
                                     A seasoned software engineer and passionate
                                     gamer, has spearheaded web and game
                                     engineering teams and made valuable
@@ -805,7 +805,7 @@ export default function Home() {
                                   <h2 className="font-bold text-xl lg:text-4xl mb-2 font-[Bevan]">
                                     Pen-Man
                                   </h2>
-                                  <p className="text-xs lg:text-base font-[Algol]">
+                                  <p className="text-xs lg:text-lg font-[Algol]">
                                     He has worked closely with animation
                                     powerhouses such as Nickelodeon, BlueSky
                                     Studios, and Bento Box Entertainment on
@@ -829,7 +829,7 @@ export default function Home() {
                       {selectedTabID === 3 && (
                         <div className="pb-16">
                           <div className="px-4">
-                            <p className="text-xs lg:text-base font-[Algol]">
+                            <p className="text-xs lg:text-lg font-[Algol]">
                               Oi intends to introduce a new token at the same
                               time as the Genesis Mint project is launched. The
                               most critical aspect of the project is the token
