@@ -290,7 +290,7 @@ export default function Home() {
         onClose={() => {
           setOpenTV(false);
         }}
-        // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div className="rotate-90 lg:rotate-0 lg:h-full lg:flex justify-center items-center outline-none">
           <div
@@ -338,7 +338,7 @@ export default function Home() {
         onClose={() => {
           setOpen2(false);
         }}
-        // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
           className="rotate-90 lg:rotate-0 lg:h-full lg:w-full lg:flex justify-center items-center"
@@ -561,7 +561,7 @@ export default function Home() {
                         <div className="text-2xl">
                           <div className="flex gap-2">
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
                               onClick={() => {
                                 setSelectedNFTTabID(0);
                               }}
@@ -573,9 +573,8 @@ export default function Home() {
                                 fill
                               />
                             </div>
-
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
                               onClick={() => {
                                 setSelectedNFTTabID(1);
                               }}
@@ -588,7 +587,7 @@ export default function Home() {
                               />
                             </div>
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
                               onClick={() => {
                                 setSelectedNFTTabID(2);
                               }}
@@ -601,7 +600,7 @@ export default function Home() {
                               />
                             </div>
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
                               onClick={() => {
                                 setSelectedNFTTabID(3);
                               }}
