@@ -34,6 +34,7 @@
 
 body {
   cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714385201/retro_mouse_cursor_30_nkyep9.png"), auto;
+  overflow-y: hidden;
 }
 
 img {
