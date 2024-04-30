@@ -373,10 +373,6 @@ video::-webkit-media-controls {
 }
 
 @media screen and (min-height: 1080px) {
-  body {
-    overflow-y: hidden;
-  }
-
   .item {
     min-width: 2560px;
     min-height: 1440px;
@@ -439,9 +435,6 @@ video::-webkit-media-controls {
   right: 0;
   bottom: 0;
   z-index: 99;
-  background-image: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714469272/noise2_qpzhgu.gif");
-  background-position: 0 0;
-  background-size: auto;
   pointer-events: none;
   opacity: 0.2;
 }
