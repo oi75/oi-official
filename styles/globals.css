@@ -427,3 +427,17 @@ video::-webkit-media-controls {
     transform: scale(1);
   }
 }
+
+.test-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-image: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714454959/noise_oi6o7e.gif");
+  background-position: 0 0;
+  background-size: auto;
+  pointer-events: none;
+  opacity: 0.1;
+}

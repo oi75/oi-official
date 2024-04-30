@@ -385,6 +385,7 @@ export default function Home() {
               >
                 <div className="pl-[10%] pr-[5%] pt-[4%] pb-[2%] w-full flex items-center justify-between">
                   <div className="w-full flex items-center justify-end gap-2 lg:gap-5">
+                    <div className='test-overlay'></div>
                     <a
                       href="https://www.discord.com"
                       target="_blank"
