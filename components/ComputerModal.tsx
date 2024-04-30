@@ -13,11 +13,11 @@ const ComputerModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
       <div
         onClick={() => setOpen(false)}
         style={{ background: "rgba(0,0,0,0.57)" }}
-        className="absolute cursor-pointer z-20 top left-0 w-full h-full"
+        className="absolute hover:cursor-custom z-20 top left-0 w-full h-full"
       ></div>
       <div
         onClick={() => setOpen(false)}
-        className=" absolute top-5 z-50 cursor-pointer right-8"
+        className=" absolute top-5 z-50 hover:cursor-custom right-8"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

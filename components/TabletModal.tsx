@@ -13,11 +13,11 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
       <div
         onClick={() => setOpen(false)}
         style={{ background: "rgba(0,0,0,0.57)" }}
-        className="absolute cursor-pointer z-10 top left-0 w-full h-full"
+        className="absolute hover:cursor-custom z-10 top left-0 w-full h-full"
       ></div>
       <div
         onClick={() => setOpen(false)}
-        className=" absolute top-5 z-50 cursor-pointer right-8"
+        className=" absolute top-5 z-50 hover:cursor-custom right-8"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
               >
                 <Image
                   alt=""
-                  className=" cursor-pointer "
+                  className=" hover:cursor-custom "
                   src={"/assets/discord.png"}
                   width={40}
                   height={40}
@@ -73,7 +73,7 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
               >
                 <Image
                   alt=""
-                  className=" cursor-pointer "
+                  className=" hover:cursor-custom "
                   src={"/assets/twitter.png"}
                   width={40}
                   height={40}
@@ -82,7 +82,7 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
             </div>
           </div>
           <div className="pl-[15%] pr-[15%] pt-[6%] w-full flex items-center justify-around">
-            <div className="flex cursor-pointer flex-col  items-center">
+            <div className="flex hover:cursor-custom flex-col  items-center">
               <Image
                 alt=""
                 className="  "
@@ -92,7 +92,7 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
               />
               <p className="text-[25px] text-white font-medium">Partner</p>
             </div>
-            <div className="flex cursor-pointer flex-col  items-center">
+            <div className="flex hover:cursor-custom flex-col  items-center">
               <Image
                 alt=""
                 className="  "
@@ -102,7 +102,7 @@ const TabletModal: React.FC<ComputerModalProps> = ({ setOpen }) => {
               />
               <p className="text-[25px] text-white font-medium">Space Kyoto</p>
             </div>
-            <div className="flex cursor-pointer flex-col  items-center">
+            <div className="flex hover:cursor-custom flex-col  items-center">
               <Image
                 alt=""
                 className="  "

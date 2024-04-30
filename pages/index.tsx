@@ -561,7 +561,7 @@ export default function Home() {
                         <div className="text-2xl">
                           <div className="flex gap-2">
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-custom"
                               onClick={() => {
                                 setSelectedNFTTabID(0);
                               }}
@@ -574,7 +574,7 @@ export default function Home() {
                               />
                             </div>
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-custom"
                               onClick={() => {
                                 setSelectedNFTTabID(1);
                               }}
@@ -587,7 +587,7 @@ export default function Home() {
                               />
                             </div>
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-custom"
                               onClick={() => {
                                 setSelectedNFTTabID(2);
                               }}
@@ -600,7 +600,7 @@ export default function Home() {
                               />
                             </div>
                             <div
-                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-pointer"
+                              className="relative overflow-hidden rounded-full w-6 h-6 lg:w-10 lg:h-10 hover:cursor-custom"
                               onClick={() => {
                                 setSelectedNFTTabID(3);
                               }}

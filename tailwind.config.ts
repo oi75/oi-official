@@ -10,12 +10,14 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
         bevan: ["Bevan", "Bevan-Regular"],
         algol: ["Algol", "Algol Regular"],
+      },
+      cursor: {
+        custom: "url('https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png'), auto",
       },
     },
   },

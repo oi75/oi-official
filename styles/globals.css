@@ -43,7 +43,7 @@ img {
 .computer {
   opacity: 0;
   transition: 0.4s all;
-  cursor: pointer;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 
 .computer:hover {
@@ -52,13 +52,13 @@ img {
 }
 .n_computer {
   transition: 0.4s all;
-  cursor: pointer;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 
 .n_computer_de {
   opacity: 0;
   transition: 0.4s all;
-  cursor: pointer;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 .n_computer:hover .n_computer_de {
   opacity: 1;
@@ -68,7 +68,7 @@ img {
 .tablet {
   opacity: 0;
   transition: 0.4s ease-in-out all;
-  cursor: pointer;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 
 .tablet:hover {
@@ -76,12 +76,12 @@ img {
 }
 .n_tablet {
   transition: 0.4s ease-in-out all;
-  cursor: pointer;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 .n_tablet_de {
   opacity: 0;
   transition: 0.4s ease-in-out all;
-  cursor: pointer;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 .n_tablet:hover .n_tablet_de {
   opacity: 1;
