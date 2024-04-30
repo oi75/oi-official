@@ -34,7 +34,6 @@
 
 body {
   cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714385201/retro_mouse_cursor_30_nkyep9.png"), auto;
-  overflow-y: hidden;
 }
 
 img {
@@ -374,6 +373,10 @@ video::-webkit-media-controls {
 }
 
 @media screen and (min-height: 1080px) {
+  body {
+    overflow-y: hidden;
+  }
+
   .item {
     min-width: 2560px;
     min-height: 1440px;
