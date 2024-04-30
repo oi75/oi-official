@@ -149,7 +149,7 @@ export default function Home() {
             className="absolute  computer_top  z-40"
           >
             <div className="w-10 h-10 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffff61]"></div>
-            <div className="w-10 h-10 relative z-10 cursor-pointer rounded-full bg-[#0000006f]"></div>
+            <div className="w-10 h-10 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
           </div>
           <Image
             alt=""
@@ -168,7 +168,7 @@ export default function Home() {
             className="absolute  tab_top  z-40"
           >
             <div className="w-5 h-5 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffffad]"></div>
-            <div className="w-5 h-5 relative z-10 cursor-pointer rounded-full bg-[#0000006f]"></div>
+            <div className="w-5 h-5 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
           </div>
           <video
             autoPlay
@@ -213,7 +213,7 @@ export default function Home() {
             </div>
             <div className="absolute  computer_top  z-40">
               <div className="w-10 h-10 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffff61]"></div>
-              <div className="w-10 h-10 relative z-10 cursor-pointer rounded-full bg-[#0000006f]"></div>
+              <div className="w-10 h-10 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
             </div>
             <div onClick={() => setOpen2(true)} className="n_tablet">
               <Image
@@ -237,7 +237,7 @@ export default function Home() {
               className="absolute  tab_top  z-40"
             >
               <div className="w-5 h-5 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffffad]"></div>
-              <div className="w-5 h-5 relative z-10 cursor-pointer rounded-full bg-[#0000006f]"></div>
+              <div className="w-5 h-5 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
             </div>
             <video
               autoPlay
@@ -392,7 +392,7 @@ export default function Home() {
                     >
                       <Image
                         alt=""
-                        className=" cursor-pointer lg:block hidden"
+                        className=" hover:cursor-custom lg:block hidden"
                         src={"/assets/discord.png"}
                         width={40}
                         height={40}
@@ -400,7 +400,7 @@ export default function Home() {
 
                       <Image
                         alt=""
-                        className=" cursor-pointer block lg:hidden"
+                        className=" hover:cursor-custom block lg:hidden"
                         src={"/assets/discord.png"}
                         width={30}
                         height={30}
@@ -413,7 +413,7 @@ export default function Home() {
                     >
                       <Image
                         alt=""
-                        className=" cursor-pointer lg:block hidden"
+                        className=" hover:cursor-custom lg:block hidden"
                         src={"/assets/x.png"}
                         width={40}
                         height={40}
@@ -421,7 +421,7 @@ export default function Home() {
 
                       <Image
                         alt=""
-                        className=" cursor-pointer block lg:hidden"
+                        className=" hover:cursor-custom block lg:hidden"
                         src={"/assets/x.png"}
                         width={30}
                         height={30}
@@ -436,7 +436,7 @@ export default function Home() {
                   <div className="h-full lg:py-4 flex flex-col gap-2 ml-1 lg:ml-4 items-start justify-around">
                     <div
                       className={
-                        "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                        "overflow-hidden hover:cursor-custom rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                         (selectedTabID == 0 ? " z-50" : "")
                       }
                     >
@@ -464,7 +464,7 @@ export default function Home() {
                     </div>
                     <div
                       className={
-                        "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                        "overflow-hidden hover:cursor-custom rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                         (selectedTabID == 1 ? " z-50" : "")
                       }
                     >
@@ -491,7 +491,7 @@ export default function Home() {
                     </div>
                     <div
                       className={
-                        "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                        "overflow-hidden hover:cursor-custom rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                         (selectedTabID == 2 ? " z-50" : "")
                       }
                     >
@@ -518,7 +518,7 @@ export default function Home() {
                     </div>
                     <div
                       className={
-                        "overflow-hidden cursor-pointer rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
+                        "overflow-hidden hover:cursor-custom rounded-full bg-[#F1ECDF] border-black border-2 hover:z-50" +
                         (selectedTabID == 3 ? " z-50" : "")
                       }
                     >
