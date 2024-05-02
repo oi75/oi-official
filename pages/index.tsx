@@ -1,27 +1,37 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import { useCallback, useEffect, useRef, useState } from "react";
-import ComputerModal from "@/components/ComputerModal";
-import TabletModal from "@/components/TabletModal";
 import Modal from "@mui/joy/Modal";
-import { ModalDialog } from "@mui/joy";
-
+import { PageLoader } from '@/components/PageLoader';
+import { DirectionIndicator } from '@/components/DirectionIndicator';
+import { SwipeIndicator } from '@/components/SwipeIndicator';
 import "remixicon/fonts/remixicon.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
-  const hours = new Date().getHours();
-  const isDayTime = hours > 6 && hours < 20;
   const [walking, setWalking] = useState<Number | null>(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [backgrondLoad, setBackgrondLoad] = useState(false);
+  const [backgroundLoad, setBackgroundLoad] = useState(false);
   const [videoLoad, setVideoLoad] = useState(false);
 
   const [selectedTabID, setSelectedTabID] = useState(0);
   const [selectedNFTTabID, setSelectedNFTTabID] = useState(0);
 
   const [loadingGift, setLoadingGift] = useState(true);
+
+  const [openTV, setOpenTV] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+  const [computerHoverDay, setComputerHoverDay] = useState(0);
+  const [tabHoverDay, setTabHoverDay] = useState(0);
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const toggleTabletModal = useCallback((value: boolean) => {
+    if (!videoLoad) {
+      return;
+    }
+
+    setOpen2(value);
+  }, [videoLoad]);
+
   useEffect(() => {
     setTimeout(() => {
       setLoadingGift(false);
@@ -29,14 +39,13 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    // console.log("video load", videoLoad);
-    if (backgrondLoad && videoLoad) {
+    if (backgroundLoad && videoLoad) {
       setTimeout(() => {
-        // console.log("walking", walking);
+        console.log("Walking")
         setWalking(100);
       }, 6000);
     }
-  }, [backgrondLoad, videoLoad]);
+  }, [backgroundLoad, videoLoad]);
 
   useEffect(() => {
     // Play the video when the component mounts
@@ -85,55 +94,17 @@ export default function Home() {
       slider.scrollTop = scrollTop - walkY;
     });
   }, []);
-  const [openTV, setOpenTV] = useState(false);
-  const [open2, setOpen2] = useState(false);
-
-  const [computerHoverDay, setComputerHoverDay] = useState(0);
-  const [tabHoverDay, setTabHoverDay] = useState(0);
-
-  const toggleTabletModal = useCallback((value: boolean) => {
-    if (!videoLoad) {
-      return;
-    }
-
-    setOpen2(value);
-  }, [videoLoad]);
 
   return (
     <div className="relative  w-full ">
-      {walking === null && (
-        <div className=" fixed flex-col lg:hidden top-[300px] left-[100px]  z-50  justify-center">
-          <Image
-            alt=""
-            onClick={() => setOpenTV(true)}
-            className="w-[140px]"
-            src={"/assets/swipe.gif"}
-            width={600}
-            height={600}
-          />
-          <h1 className=" text-[20px] w-[150px] text-black font-bold">
-            Swipe to move in any direction
-          </h1>
-        </div>
+      {(!videoLoad || !backgroundLoad || loadingGift) && (
+        <PageLoader />
       )}
-      {
-        <div>
-          <div className="fixed bottom-0 left-1/2 animate-pulse z-50">
-            <i className="ri-arrow-down-s-fill text-white text-4xl"></i>
-          </div>
-          <div className="fixed top-1/2 right-4 animate-pulse z-50">
-            <i className="ri-arrow-right-s-fill text-white text-4xl"></i>
-          </div>
-          <div className="fixed top-0 left-1/2 animate-pulse z-50">
-            <i className="ri-arrow-up-s-fill text-white text-4xl"></i>
-          </div>
-          <div className="fixed top-1/2 left-4 animate-pulse z-50">
-            <i className="ri-arrow-left-s-fill text-white text-4xl"></i>
-          </div>
-        </div>
-      }
+      {walking === null && (
+        <SwipeIndicator />
+      )}
+      <DirectionIndicator />
       <div className="items">
-        {/* {isDayTime ? ( */}
         <div className="item relative">
           <Image
             alt=""
@@ -142,8 +113,7 @@ export default function Home() {
             width={2560}
             height={1200}
             onLoad={() => {
-              setBackgrondLoad(true);
-              console.log("background loaded");
+              setBackgroundLoad(true);
             }}
           />
 
@@ -198,120 +168,19 @@ export default function Home() {
             <source src="/assets/space_background_2.mp4" type="video/mp4" />
           </video>
         </div>
-        {/* ) : (
-          <div className="item relative">
-            {open && <ComputerModal setOpen={setOpen} />}
-            {open2 && <TabletModal setOpen={setOpen2} />}
-            <Image
-              alt=""
-              className="background_image  relative z-10"
-              src={"/desktop/n_background_2.webp"}
-              width={2560}
-              height={1200}
-            />
 
-            <div onClick={() => setOpen(true)} className="n_computer">
-              <Image
-                alt=""
-                className="absolute n_computer_de z-30"
-                src={"/desktop/n_TV_cut_outline.webp"}
-                width={600}
-                height={600}
-              />
-              <Image
-                alt=""
-                className="absolute n_light z-30"
-                src={"/desktop/n_light_2.webp"}
-                width={600}
-                height={600}
-              />
-            </div>
-            <div className="absolute  computer_top  z-40">
-              <div className="w-10 h-10 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffff61]"></div>
-              <div className="w-10 h-10 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
-            </div>
-            <div onClick={() => setOpen2(true)} className="n_tablet">
-              <Image
-                alt=""
-                className="absolute n_tablet_de z-30"
-                src={"/desktop/n_tablet_cut_outline.webp"}
-                width={600}
-                height={600}
-              />
-              <Image
-                alt=""
-                className="absolute n_tablet_light z-30"
-                src={"/desktop/n_light_1.webp"}
-                width={600}
-                height={600}
-              />
-            </div>
-            <div
-              onMouseEnter={() => setTabHoverDay(1)}
-              onClick={() => setOpen2(true)}
-              className="absolute  tab_top  z-40"
-            >
-              <div className="w-5 h-5 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffffad]"></div>
-              <div className="w-5 h-5 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
-            </div>
-            <video
-              autoPlay
-              muted
-              loop
-              ref={videoRef}
-              className=" absolute z-[5] space_vid"
-              width="640"
-              height="360"
-              playsInline
-            >
-              <source src="/assets/space_background_2.mp4" type="video/mp4" />
-            </video>
-          </div>
-        )} */}
       </div>
-      {(!videoLoad || !backgrondLoad || loadingGift) && (
-        <div className=" fixed bg-[#111] flex items-center justify-center top-0 left-0 w-full h-full z-[100]">
-          <Image
-            alt=""
-            className="z-10 object-cover"
-            fill
-            src={"/assets/space.webp"}
-          />
-          <video
-            autoPlay
-            muted
-            loop
-            className=" z-50"
-            width="300"
-            height="360"
-            playsInline
-          >
-            <source src="/assets/loading.webm" type="video/webm" />
-          </video>
-          {/* <Image
-              alt=""
-              className="z-50"
-              src={"/loading.gif"}
-              width={200}
-              height={200}
-            /> */}
-        </div>
-      )}
 
-      {/* {openTV && <ComputerModal setOpen={setOpenTV} />} */}
-      {/* {open2 && <TabletModal setOpen={setOpen2} />} */}
       <Modal
         open={openTV}
         onClose={() => {
           setOpenTV(false);
         }}
-      // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div className="rotate-90 lg:rotate-0 lg:h-full lg:flex justify-center items-center outline-none">
           <div
             className={
               "w-[100vh] h-[100vw]  outline-none " +
-              // "-translate-x-1/3 translate-y-1/2 lg:translate-x-0 lg:translate-y-0" +
               "lg:w-full lg:h-full lg:p-16 " +
               "flex items-end lg:items-stretch " +
               ""
@@ -353,7 +222,6 @@ export default function Home() {
         onClose={() => {
           toggleTabletModal(false);
         }}
-      // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <div
           className="rotate-90 lg:rotate-0 lg:h-full lg:w-full lg:flex justify-center items-center"
