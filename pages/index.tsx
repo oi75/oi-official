@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ComputerModal from "@/components/ComputerModal";
 import TabletModal from "@/components/TabletModal";
 import Modal from "@mui/joy/Modal";
@@ -91,6 +91,14 @@ export default function Home() {
   const [computerHoverDay, setComputerHoverDay] = useState(0);
   const [tabHoverDay, setTabHoverDay] = useState(0);
 
+  const toggleTabletModal = useCallback((value: boolean) => {
+    if (!videoLoad) {
+      return;
+    }
+
+    setOpen2(value);
+  }, [videoLoad]);
+
   return (
     <div className="relative  w-full ">
       {walking === null && (
@@ -160,7 +168,7 @@ export default function Home() {
           </div>
           <Image
             alt=""
-            onClick={() => setOpen2(true)}
+            onClick={() => toggleTabletModal(true)}
             className="absolute tablet z-30"
             src={"/desktop/d_tablet_cut_outline.webp"}
             width={600}
@@ -171,7 +179,7 @@ export default function Home() {
           />
           <div
             onMouseEnter={() => setTabHoverDay(1)}
-            onClick={() => setOpen2(true)}
+            onClick={() => toggleTabletModal(true)}
             className="absolute  tab_top  z-40"
           >
             <div className="w-5 h-5 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffffad]"></div>
@@ -343,7 +351,7 @@ export default function Home() {
       <Modal
         open={open2}
         onClose={() => {
-          setOpen2(false);
+          toggleTabletModal(false);
         }}
       // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
@@ -352,7 +360,7 @@ export default function Home() {
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
-            setOpen2(false);
+            toggleTabletModal(false);
           }}
         >
           <div
@@ -360,7 +368,7 @@ export default function Home() {
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              setOpen2(false);
+              toggleTabletModal(false);
             }}
           >
             <div
@@ -379,7 +387,7 @@ export default function Home() {
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  setOpen2(false);
+                  toggleTabletModal(false);
                 }}
               />
 
@@ -393,8 +401,15 @@ export default function Home() {
                 <div className="pl-[10%] pr-[5%] pt-[4%] pb-[2%] w-full flex items-center justify-between">
                   <div className="w-full flex items-center justify-end gap-2 lg:gap-5">
                     <div className='noise-overlay'>
-                      <Image src="/assets/noise.gif" fill alt="noise" priority>
-                      </Image>
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full"
+                      >
+                        <source src="/desktop/tv_noise.webm" type="video/webm" />
+                      </video>
                     </div>
                     <a
                       href="https://www.discord.com"
