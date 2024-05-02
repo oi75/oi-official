@@ -51,13 +51,17 @@ export default function Home() {
     const slider = document.querySelector(".items") as HTMLElement;
     let isDown = false;
     let startX: number;
+    let startY: number;
     let scrollLeft: number;
+    let scrollTop: number;
 
     slider.addEventListener("mousedown", (e: MouseEvent) => {
       isDown = true;
       slider.classList.add("active");
       startX = e.pageX - slider.offsetLeft;
+      startY = e.pageY - slider.offsetTop;
       scrollLeft = slider.scrollLeft;
+      scrollTop = slider.scrollTop;
     });
 
     slider.addEventListener("mouseleave", () => {
@@ -74,8 +78,11 @@ export default function Home() {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 3; // scroll-fast
-      slider.scrollLeft = scrollLeft - walk;
+      const y = e.pageY - slider.offsetTop;
+      const walkX = (x - startX) * 3; // scroll-fast
+      const walkY = (y - startY) * 3; // scroll-fast
+      slider.scrollLeft = scrollLeft - walkX;
+      slider.scrollTop = scrollTop - walkY;
     });
   }, []);
   const [openTV, setOpenTV] = useState(false);
@@ -625,7 +632,7 @@ export default function Home() {
                         <p className="text-2xl font-[Bevan]">Vision</p>
                       )}
                     </div>
-                    <div className="h-full relativel overflow-auto p-4">
+                    <div className="h-full relative overflow-auto p-4">
                       {/* Tab 1 */}
                       {selectedTabID === 0 && (
                         <div className="pb-16">
