@@ -21,6 +21,7 @@ export default function Home() {
 
   const [computerHoverDay, setComputerHoverDay] = useState(0);
   const [tabHoverDay, setTabHoverDay] = useState(0);
+  const [medalHoverDay, setMedalHoverDay] = useState(0);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -135,6 +136,23 @@ export default function Home() {
           >
             <div className="w-10 h-10 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffff61]"></div>
             <div className="w-10 h-10 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
+          </div>
+          <Image
+            alt=""
+            className="absolute medal z-30"
+            src={"/desktop/d_medal_cut_outline.webp"}
+            width={600}
+            style={{ opacity: medalHoverDay }}
+            onMouseEnter={() => setMedalHoverDay(1)}
+            onMouseLeave={() => setMedalHoverDay(0)}
+            height={600}
+          />
+          <div
+            onMouseEnter={() => setMedalHoverDay(1)}
+            className="absolute  medal_top  z-40"
+          >
+            <div className="w-5 h-5 animate-ping duration-300 ease-linear absolute top-0 rounded-full left-0 bg-[#ffffffad]"></div>
+            <div className="w-5 h-5 relative z-10 hover:cursor-custom rounded-full bg-[#0000006f]"></div>
           </div>
           <Image
             alt=""

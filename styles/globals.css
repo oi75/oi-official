@@ -69,6 +69,12 @@ video::-webkit-media-controls {
   /* transform: scale(1.01); */
 }
 
+.medal {
+  opacity: 0;
+  transition: 0.4s ease-in-out all;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
+}
+
 .tablet {
   opacity: 0;
   transition: 0.4s ease-in-out all;
@@ -105,6 +111,11 @@ video::-webkit-media-controls {
   width: 8.1%;
   right: 20.85%;
   bottom: 18.5%;
+}
+.medal {
+  width: 9.1%;
+  right: 33%;
+  bottom: 20%;
 }
 .space_vid {
   width: 24.5%;
@@ -148,10 +159,17 @@ video::-webkit-media-controls {
 .computer_top {
   left: 35%;
   top: 50%;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 .tab_top {
   right: 24%;
   bottom: 23%;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
+}
+.medal_top {
+  right: 36.5%;
+  bottom: 23%;
+  cursor: url("https://res.cloudinary.com/dr4ka7tze/image/upload/v1714445271/cursor_1_s3tcnc.png"), auto;
 }
 
 .items {
